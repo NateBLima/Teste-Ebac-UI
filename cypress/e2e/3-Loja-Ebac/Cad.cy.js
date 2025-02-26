@@ -21,7 +21,7 @@ describe('Funcionalidade: Cadastro', () =>{
     it('Deve completar o cadastro com sucesso - usando variáveis', () => {
         var email = faker.internet.email()
         var name = faker.person.firstName()
-        var lname = faker.person.lastName()
+        var lName = faker.person.lastName()
 
         cy.get('#reg_email').type(email)
         cy.get('#reg_password').type('testes@123')
@@ -29,7 +29,7 @@ describe('Funcionalidade: Cadastro', () =>{
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
         cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
         cy.get('#account_first_name').type(name)
-        cy.get('#account_last_name').type(lname)
+        cy.get('#account_last_name').type(lName)
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('exist')
     });
