@@ -19,7 +19,7 @@ Cypress.Commands.add('preCadastro', (username, password, nome, sobrenome) => {
 Cypress.Commands.add('detalhesConta', (nome, sobrenome, usuario) =>{
     cy.get('#account_first_name').type(nome)
     cy.get('#account_last_name').type(sobrenome)
-    cy.get('#account_display_name').type(usuario)
+    cy.get('#account_display_name').clear().type(usuario)
     cy.get('.woocommerce-Button').click()
 
 
