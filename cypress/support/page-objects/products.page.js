@@ -13,12 +13,18 @@ class ProductsPage {
         .click()
     }
 
-    visitProduct() {
-        //code
+    visitProduct(nameProduct) {
+        //cy.visit(`produtos/${nameProduct}`)
+        const urlFormatada = nameProduct.replace(/ /g, '-')
+        cy.visit(`produtos/${urlFormatada}`)
     }
 
-    addProductCart() {
-        //code
+    addProductCart(size, color, quantity) {
+        cy.get('.button-variable-item-'+ size).click()
+        cy.get(`.button-variable-item-${color}`).click()
+        cy.get('.input-text').clear().type(quantity)
+        cy.get('.single_add_to_cart_button').click()
+        
     }
 }
 

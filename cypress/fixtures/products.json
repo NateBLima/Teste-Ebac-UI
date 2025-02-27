@@ -1,0 +1,20 @@
+[
+    {
+        "nameProduct": "Ariel Roll Sleeve Sweatshirt",
+        "size": "XL",
+        "color": "Purple",
+        "quantity": 1
+    },
+    {
+        "nameProduct": "Autumn Pullie",
+        "size": "L",
+        "color": "Red",
+        "quantity": 1
+    },
+    {
+        "nameProduct": "Eos V-Neck Hoodie",
+        "size": "M",
+        "color": "Blue",
+        "quantity": 1
+    }
+]
