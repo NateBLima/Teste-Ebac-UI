@@ -35,7 +35,7 @@ describe('Funcionalidade: Produtos', () => {
         cy.get('.woocommerce-message').should('contain', ' foi adicionado no seu carrinho.')
     });
 
-    it.only('Deve adicionar produto ao carrinho - buscando da massa de dados', () => {
+    it('Deve adicionar produto ao carrinho - buscando da massa de dados', () => {
         cy.fixture('products').then(dados => {
 
             productsPage.findProduct(dados[2].nameProduct)
